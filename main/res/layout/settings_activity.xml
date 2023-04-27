@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <Switch
+        android:id="@+id/notification_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Notifications"
+        android:layout_margin="16dp"
+        android:layout_below="@id/header_text"
+        android:padding="16dp"
+        android:minWidth="120dp"
+        android:minHeight="48dp"
+        android:thumbTextPadding="16dp"
+        android:checked="true"
+        android:switchPadding="32dp"/>
+
+
+    <!-- Sort Order Options -->
+    <TextView
+        android:id="@+id/sort_order_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort Order"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/notification_switch"
+        android:layout_margin="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/sort_order_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/sort_order_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <RadioButton
+            android:id="@+id/chronological_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chronological Order"
+            android:textColor="#000"/>
+
+        <RadioButton
+            android:id="@+id/reverse_chronological_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reverse Chronological Order"
+            android:textColor="#000"/>
+
+    </RadioGroup>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

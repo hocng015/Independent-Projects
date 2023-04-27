@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Reminder"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <!-- Reminder Title -->
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/header_text"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/title_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter title"
+        android:textColorHint="#aaa"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_below="@id/title_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Reminder Details -->
+    <TextView
+        android:id="@+id/details_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/title_edittext"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/details_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter details"
+        android:textColorHint="#aaa"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:lines="5"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:imeOptions="actionNext"
+        android:layout_below="@id/details_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Reminder Date and Time -->
+    <TextView
+        android:id="@+id/date_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/details_edittext"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/date_time_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_time_title"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/date_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_time_display"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Select" />
+
+    <!-- Notification Time -->
+    <TextView
+        android:id="@+id/notification_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification Time"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/date_time_button"
+        android:layout_margin="16dp"/>
+
+    <Spinner
+        android:id="@+id/notification_time_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_time_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Recurrence Time -->
+
+    <TextView
+        android:id="@+id/recurrence_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_time_button"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/notification_time_label"
+        android:text="Recurrence Time"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/recurrence_time_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recurrence_time_label"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/notification_time_label" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_time_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#008000"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="Save"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/save_button"/>
+
+</RelativeLayout>
